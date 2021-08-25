@@ -1,4 +1,4 @@
-baseURL = "https://github.com/athul"
+baseURL = "https://tinkerhubcek.github.io/git-workshop"
 languageCode = "en-us"
 title = "Introduction to Git and GitHub"
 pygmentsStyle="dracula"
