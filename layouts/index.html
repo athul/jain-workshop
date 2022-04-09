@@ -2,20 +2,21 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <img src="{{ "img.jpeg" | absURL }}" class="img-fluid" alt="...">
+      <img src="{{ " img.jpeg" | absURL }}" class="img-fluid" alt="...">
       <h2 class="fw-light">Introduction to Git and GitHub</h2>
       <p class="lead">A simple website created to teach students the
         basics of version control in software development using Git and GitHub</p>
-      <h4><b>Speaker</b>: <a class="text-dark hover-shadow text-decoration-none" href="http://athulcyriac.xyz/"> Athul Cyriac Ajay </a></h4>
+      <h4><b>Speaker</b>: <a class="text-dark hover-shadow text-decoration-none" href="http://athulcyriac.in/"> Athul
+          Cyriac Ajay </a></h4>
       <p>
-        <div class="py-3">
-          <button type="button" onclick="location.href='#pre-requisites'"
-              class="btn btn-outline-dark">Workshop Documentation</button>
-      <button type="button" onclick="location.href='https://training.github.com/downloads/github-git-cheat-sheet/'"
-              class="btn btn-outline-dark">Git Cheatsheet</button>
-      <button type="button" onclick="location.href='https://new-slides.pages.dev/'"
-              class="btn btn-outline-dark">Slides</button>
-        </div>
+      <div class="py-3">
+        <button type="button" onclick="location.href='#pre-requisites'" class="btn btn-outline-dark">Workshop
+          Documentation</button>
+        <button type="button" onclick="location.href='https://training.github.com/downloads/github-git-cheat-sheet/'"
+          class="btn btn-outline-dark">Git Cheatsheet</button>
+        <button type="button" onclick="location.href='https://new-slides.pages.dev/'"
+          class="btn btn-outline-dark">Slides</button>
+      </div>
       </p>
     </div>
   </div>
@@ -23,47 +24,49 @@
 <div class="col-lg-9 container bg-light">
   {{with .Site.GetPage "/instructions/_index.md"}}
   <article class="col py-lg-5">
-  <div class="instructions">{{.Content}}</div>
+    <div class="instructions">{{.Content}}</div>
   </article>
   {{end}}
 </div>
 <div class="album py-5"></div>
-  <div class="container">
-    <h2 class="py-5">Participants: </h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-      {{ range .RegularPages }}
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://github.com/{{ .Params.github }}.png" class="card-img-top" alt="...">
+<div class="container">
+  <h2 class="py-5">Participants: </h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+    {{ range .RegularPages }}
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="https://github.com/{{ .Params.github }}.png" class="card-img-top" alt="...">
 
-          <div class="card-body p-5">
-            <h5 class="card-title">{{ .Params.name }}</h5>
-            <p class="card-text">{{ .Params.desc }}</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                {{ $web := "none" }}
-                {{  if not (eq .Params.web $web) }}
-                <a href="{{ .Params.web }}<" class="me-4 text-reset">
-                  <i class="fas fa-globe-americas"></i>
-                </a>
-                {{end}}
-                <a href="https://github.com/{{ .Params.github }}" class="me-4 text-reset">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
+        <div class="card-body p-5">
+          <h5 class="card-title">{{ .Params.name }}</h5>
+          <p class="card-text">{{ .Params.desc }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              {{ $web := "none" }}
+              {{ if not (eq .Params.web $web) }}
+              <a href="{{ .Params.web }}<" class="me-4 text-reset">
+                <i class="fas fa-globe-americas"></i>
+              </a>
+              {{end}}
+              <a href="https://github.com/{{ .Params.github }}" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      {{ end }}
     </div>
+    {{ end }}
   </div>
 </div>
+</div>
 <style>
-  pre{
+  pre {
     padding: 1rem 1.4rem !important;
   }
-  .instructions h2,h1{
+
+  .instructions h2,
+  h1 {
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: underline;
