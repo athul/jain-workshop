@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://athul.github.io/jain-workshop/"
 languageCode = "en-us"
 title = "Introduction to Git and GitHub"
 pygmentsStyle = "dracula"
